@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <div padding>
-    <ion-segment [(ngModel)]="pet" color="secondary">
+    <ion-segment [(ngModel)]="activity" color="secondary">
       <ion-segment-button value="my-activity">
         My
       </ion-segment-button>
@@ -22,7 +22,50 @@
     </ion-segment>
   </div>
 
-  <div [ngSwitch]="pet">
+  <div [ngSwitch]="activity">
+   <div *ngSwitchCase="'my-activity'">
+
+    <ion-card *ngFor="let card of cards">
+
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="https://avatars.io/facebook/ederson.maschio" />
+        </ion-avatar>
+        <h2>Ederson Maschio</h2>
+        <p>November 5, 1955</p>
+      </ion-item>
+
+      <img src="http://placehold.it/500x200" />
+
+      <ion-card-content>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s.
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 Likes</div>
+            </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comments</div>
+            </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+
+   </div>
+
     <ion-list *ngSwitchCase="'my-activity'">
       <ion-item>
         <ion-thumbnail item-left>
@@ -52,6 +95,6 @@
       </ion-item>
       ...
     </ion-list>
-    
 </div>
+
 </ion-content>

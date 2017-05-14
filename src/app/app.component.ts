@@ -39,7 +39,7 @@ export class MyApp {
       { title: 'Timers', icon: 'alarm', component: TimersPage },
       { title: 'The WOD Machine', icon: 'settings', component: TheWodMachinePage },
       { title: 'Settings', icon: 'options', component: SettingsPage },
-      { title: 'List', icon: 'angular', component: ListPage }
+      { title: 'List', icon: 'albums', component: ListPage }
     ];
   }
 

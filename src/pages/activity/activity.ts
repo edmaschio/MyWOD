@@ -13,8 +13,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'activity.html',
 })
 export class ActivityPage {
+  cards: any;
+  activity: string = 'my-activity';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    this.cards = new Array(10);
   }
 
   ionViewDidLoad() {
