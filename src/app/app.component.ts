@@ -1,11 +1,19 @@
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ActivityPage } from "../pages/activity/activity";
+import { DailyWodsPage } from '../pages/daily-wods/daily-wods';
+import { BoxNewsPage } from '../pages/box-news/box-news';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { BenchmarkWodsPage } from '../pages/benchmark-wods/benchmark-wods';
+import { PersonalBestsPage } from '../pages/personal-bests/personal-bests';
+import { TimersPage } from "../pages/timers/timers";
+import { TheWodMachinePage } from '../pages/the-wod-machine/the-wod-machine';
+import { SettingsPage } from '../pages/settings/settings';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,17 +23,24 @@ export class MyApp {
 
   rootPage: any = ActivityPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, icon: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Activity', component: ActivityPage },
-      { title: 'List', component: ListPage }
+      { title: 'Activity', icon: 'flame', component: ActivityPage },
+      { title: 'Daily WODs', icon: 'train', component: DailyWodsPage },
+      { title: 'Box News', icon: 'paper', component: BoxNewsPage },
+      { title: 'Calendar', icon: 'calendar', component: CalendarPage },
+      { title: 'Benchmark WODs', icon: 'medal', component: BenchmarkWodsPage },
+      { title: 'Personal Bests', icon: 'trophy', component: PersonalBestsPage },
+      { title: 'Timers', icon: 'alarm', component: TimersPage },
+      { title: 'The WOD Machine', icon: 'settings', component: TheWodMachinePage },
+      { title: 'Settings', icon: 'options', component: SettingsPage },
+      { title: 'List', icon: 'angular', component: ListPage }
     ];
-
   }
 
   initializeApp() {
