@@ -14,6 +14,9 @@ import { PersonalBestsPage } from '../pages/personal-bests/personal-bests';
 import { TimersPage } from "../pages/timers/timers";
 import { TheWodMachinePage } from '../pages/the-wod-machine/the-wod-machine';
 import { SettingsPage } from '../pages/settings/settings';
+import { UtilitiesPage } from "../pages/utilities/utilities";
+import { InstructionPage } from "../pages/instruction/instruction";
+import { DictionaryPage } from "../pages/dictionary/dictionary";
 
 @Component({
   templateUrl: 'app.html'
@@ -36,7 +39,10 @@ export class MyApp {
       { title: 'Calendar', icon: 'calendar', component: CalendarPage },
       { title: 'Benchmark WODs', icon: 'medal', component: BenchmarkWodsPage },
       { title: 'Personal Bests', icon: 'trophy', component: PersonalBestsPage },
+      { title: 'Dictionary', icon: 'clipboard', component: DictionaryPage },
       { title: 'Timers', icon: 'alarm', component: TimersPage },
+      { title: 'Utilities', icon: 'calculator', component: UtilitiesPage },
+      { title: 'Instruction', icon: 'book', component: InstructionPage },      
       { title: 'The WOD Machine', icon: 'settings', component: TheWodMachinePage },
       { title: 'Settings', icon: 'options', component: SettingsPage },
       { title: 'List', icon: 'albums', component: ListPage }

@@ -13,6 +13,9 @@ import { PersonalBestsPage } from '../pages/personal-bests/personal-bests';
 import { TimersPage } from "../pages/timers/timers";
 import { TheWodMachinePage } from '../pages/the-wod-machine/the-wod-machine';
 import { SettingsPage } from '../pages/settings/settings';
+import { UtilitiesPage } from "../pages/utilities/utilities";
+import { InstructionPage } from "../pages/instruction/instruction";
+import { DictionaryPage } from "../pages/dictionary/dictionary";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,6 +32,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TimersPage,
     TheWodMachinePage,
     SettingsPage,
+    UtilitiesPage,
+    InstructionPage,
+    DictionaryPage,
     ListPage
   ],
   imports: [
@@ -47,6 +53,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TimersPage,
     TheWodMachinePage,
     SettingsPage,
+    UtilitiesPage,
+    InstructionPage,    
+    DictionaryPage,
     ListPage
   ],
   providers: [
