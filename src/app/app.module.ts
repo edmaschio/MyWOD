@@ -19,6 +19,7 @@ import { DictionaryPage } from "../pages/dictionary/dictionary";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { DataTermsProvider } from '../providers/data-terms/data-terms';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    DataTermsProvider
   ]
 })
 export class AppModule { }

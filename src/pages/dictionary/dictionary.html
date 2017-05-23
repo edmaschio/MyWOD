@@ -8,6 +8,12 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner></ion-spinner>
+  </div>
+
   <ion-list>
     <ion-item text-wrap *ngFor="let item of items">
       <h2>{{ item.term }} </h2>
