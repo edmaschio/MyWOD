@@ -1,20 +1,19 @@
 <ion-menu [content]="content" >
   <ion-header>
     <ion-toolbar>
-      <!--<ion-title>Menu</ion-title>-->
-      <ion-item color="primary">
+      <ion-item color="dark">
         <ion-avatar item-left>
           <img src="https://avatars.io/facebook/ederson.maschio" />
         </ion-avatar>
-        <h3>Ederson Maschio</h3>
-        <p>Crossfit 1500</p>
-      </ion-item>
+        <h2>Ederson Maschio</h2>
+        <h3>Crossfit 1500</h3>
+      </ion-item>          
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list no-lines>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+    <button color="dark" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon item-left [name]="p.icon"></ion-icon> 
         {{p.title}}
       </button>
