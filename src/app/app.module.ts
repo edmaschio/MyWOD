@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -16,6 +17,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { UtilitiesPage } from "../pages/utilities/utilities";
 import { InstructionPage } from "../pages/instruction/instruction";
 import { DictionaryPage } from "../pages/dictionary/dictionary";
+import { LoadDataPage } from '../pages/load-data/load-data';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,10 +38,12 @@ import { DataTermsProvider } from '../providers/data-terms/data-terms';
     UtilitiesPage,
     InstructionPage,
     DictionaryPage,
-    ListPage
+    ListPage,
+    LoadDataPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -57,7 +61,8 @@ import { DataTermsProvider } from '../providers/data-terms/data-terms';
     UtilitiesPage,
     InstructionPage,    
     DictionaryPage,
-    ListPage
+    ListPage,
+    LoadDataPage
   ],
   providers: [
     StatusBar,

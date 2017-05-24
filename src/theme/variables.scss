@@ -33,14 +33,18 @@ $colors: (
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
+$loading-ios-background : transparent;
+$loading-ios-box-shadow : transparent;
+$loading-ios-spinner-color : white;
 
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$loading-md-background : transparent;
+$loading-md-box-shadow : transparent;
+$loading-md-spinner-color : white;
 
 
 

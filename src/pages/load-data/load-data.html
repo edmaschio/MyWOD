@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      World News
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let item of newsData">
+      <h2>{{item.term}}</h2>
+      <p>{{item.description}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

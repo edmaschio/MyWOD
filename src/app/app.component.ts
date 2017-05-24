@@ -1,3 +1,4 @@
+import { LoadDataPage } from '../pages/load-data/load-data';
 
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -33,6 +34,8 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+      
+      { title: 'LoadPage', icon: 'flame', component: LoadDataPage },
       { title: 'Activity', icon: 'flame', component: ActivityPage },
       { title: 'Daily WODs', icon: 'train', component: DailyWodsPage },
       { title: 'Box News', icon: 'paper', component: BoxNewsPage },
