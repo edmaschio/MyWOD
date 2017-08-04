@@ -4,6 +4,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Subject } from 'rxjs';
 
 import { ListPage } from '../pages/list/list';
 import { ActivityPage } from "../pages/activity/activity";
@@ -26,10 +27,15 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = ActivityPage;
+  activePage = new Subject();
 
   pages: Array<{title: string, icon: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen) {
+
     this.initializeApp();
 
     // used for an example of ngFor and navigation

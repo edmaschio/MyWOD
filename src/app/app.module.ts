@@ -1,3 +1,4 @@
+import { SharedModule } from './shared.module';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -22,6 +23,7 @@ import { LoadDataPage } from '../pages/load-data/load-data';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DataTermsProvider } from '../providers/data-terms/data-terms';
+import { CountdownTimerComponent } from '../components/countdown-timer/countdown-timer';
 
 @NgModule({
   declarations: [
@@ -39,12 +41,14 @@ import { DataTermsProvider } from '../providers/data-terms/data-terms';
     InstructionPage,
     DictionaryPage,
     ListPage,
-    LoadDataPage
+    LoadDataPage,
+    CountdownTimerComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    SharedModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
