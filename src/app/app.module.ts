@@ -23,7 +23,6 @@ import { LoadDataPage } from '../pages/load-data/load-data';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DataTermsProvider } from '../providers/data-terms/data-terms';
-import { CountdownTimerComponent } from '../components/countdown-timer/countdown-timer';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,6 @@ import { CountdownTimerComponent } from '../components/countdown-timer/countdown
     DictionaryPage,
     ListPage,
     LoadDataPage,
-    CountdownTimerComponent
   ],
   imports: [
     BrowserModule,
