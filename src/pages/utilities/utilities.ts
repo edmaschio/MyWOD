@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the UtilitiesPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-utilities',
@@ -14,11 +8,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class UtilitiesPage {
 
+  weight: number = 100;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UtilitiesPage');
+  setMinus(minWeight: number) {
+    this.weight -= minWeight;
+    console.log(this.weight);    
   }
 
+  setPlus(addWeight: number) {
+    this.weight += addWeight;
+    console.log(this.weight);    
+  }
+  
 }
