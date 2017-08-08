@@ -1,24 +1,24 @@
-<ion-menu [content]="content" >
-  <ion-header>
-    <ion-toolbar>
-      <ion-item color="dark">
-        <ion-avatar item-left>
-          <img src="https://avatars.io/facebook/ederson.maschio" />
-        </ion-avatar>
-        <h2>Ederson Maschio</h2>
-        <h3>Crossfit 1500</h3>
-      </ion-item>          
-    </ion-toolbar>
-  </ion-header>
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-item color="dark">
+                <ion-avatar item-left>
+                    <img src="https://avatars.io/facebook/ederson.maschio" />
+                </ion-avatar>
+                <h2>Ederson Maschio</h2>
+                <h3>Crossfit 1500</h3>
+            </ion-item>
+        </ion-toolbar>
+    </ion-header>
 
-  <ion-content>
-    <ion-list no-lines>
-    <button color="dark" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+    <ion-content>
+        <ion-list no-lines>
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon item-left [name]="p.icon"></ion-icon> 
         {{p.title}}
       </button>
-    </ion-list>
-  </ion-content>
+        </ion-list>
+    </ion-content>
 
 </ion-menu>
 

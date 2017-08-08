@@ -1,3 +1,4 @@
+import { SharedModule } from './shared.module';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -39,12 +40,13 @@ import { DataTermsProvider } from '../providers/data-terms/data-terms';
     InstructionPage,
     DictionaryPage,
     ListPage,
-    LoadDataPage
+    LoadDataPage,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    SharedModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
