@@ -10,6 +10,7 @@ export class UtilitiesPage {
   toKgFactor: number = .45359237;
   toLbFactor: number = 2.2046226218488;
   weight: number = 225;
+  unit: string = 'lb';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -24,11 +25,24 @@ export class UtilitiesPage {
     console.log(this.weight);    
   }
   
-  private convertLbToKg(): number {
+  convertLbToKg(): number {
     return this.weight * this.toKgFactor;
   }
 
-  private convertKgToLb(): number {
+  convertKgToLb(): number {
     return this.weight * this.toLbFactor;
   }  
+
+  displayValue(): number {
+    return this.unit == 'lb' ? this.convertLbToKg() : this.convertKgToLb();
+  }
+
+  private convertTo(unit: string) {
+    console.log(unit);
+    if (unit == 'kg') {
+      this.weight = this.weight * this.toKgFactor;
+    } else if (unit == 'lb') {
+      this.weight = this.weight * this.toLbFactor;
+    }
+  }
 }
