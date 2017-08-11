@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 
+export class PercentWeight {
+  constructor(percValue: number, weightValue: number) {}
+}
 
 @IonicPage()
 @Component({
@@ -35,5 +38,13 @@ export class UtilitiesPage {
     this.weight *= (unit == 'Kg' ? this.toKgFactor : this.toLbFactor);
   }
 
+  getPercValues(): PercentWeight[] {
+    console.log('getperc');
+    let aux: PercentWeight[] = [];
+    for (var perc = 105; perc > 0; perc-= 5) {
+      aux.push({percValue: perc, weightValue: this.weight * (perc/100) });
+    }
+    return aux;
+  }
 
 }
