@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -10,39 +11,33 @@ export class UtilitiesPage {
   toKgFactor: number = .45359237;
   toLbFactor: number = 2.2046226218488;
   weight: number = 225;
-  unit: string = 'lb';
+  unit: string = 'Lb';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor() { }
 
   setMinus(minWeight: number) {
     this.weight -= minWeight;
-    console.log(this.weight);    
   }
 
   setPlus(addWeight: number) {
     this.weight += addWeight;
-    console.log(this.weight);    
   }
   
-  convertLbToKg(): number {
-    return this.weight * this.toKgFactor;
+  displayValue(): number {
+    return this.weight * (this.unit == 'Lb' ? this.toKgFactor : this.toLbFactor);
   }
 
-  convertKgToLb(): number {
-    return this.weight * this.toLbFactor;
-  }  
-
-  displayValue(): number {
-    return this.unit == 'lb' ? this.convertLbToKg() : this.convertKgToLb();
+  displayUnit(): string {
+    return (this.unit == 'Lb' ? 'Kg' : 'Lb');
   }
 
   private convertTo(unit: string) {
-    console.log(unit);
-    if (unit == 'kg') {
+    if (unit == 'Kg') {
       this.weight = this.weight * this.toKgFactor;
-    } else if (unit == 'lb') {
+    } else if (unit == 'Lb') {
       this.weight = this.weight * this.toLbFactor;
     }
   }
+
+
 }

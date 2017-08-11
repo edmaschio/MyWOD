@@ -14,14 +14,14 @@
         <ion-row radio-group [(ngModel)]="unit">
             <ion-col col-6>
                 <ion-item>
-                    <ion-radio value="lb" (ionSelect)="convertTo('lb')"></ion-radio>
-                    <ion-label>Lb</ion-label>
+                    <ion-radio value="Lb" (ionSelect)="convertTo('Lb')"></ion-radio>
+                    <ion-label>Lb {{ unit == 'Kg' ? ('(' + (displayValue() | number: '1.0-0') + ')') : '' }}</ion-label>
                 </ion-item>
             </ion-col>
             <ion-col col-6>
                 <ion-item>
-                    <ion-radio value="kg" (ionSelect)="convertTo('kg')"></ion-radio>
-                    <ion-label>Kg</ion-label>
+                    <ion-radio value="Kg" (ionSelect)="convertTo('Kg')"></ion-radio>
+                    <ion-label>Kg {{ unit == 'Lb' ? ('(' + (displayValue() | number: '1.0-0') + ')') : '' }}</ion-label>
                 </ion-item>
             </ion-col>
         </ion-row>
@@ -33,7 +33,7 @@
                 <button color="secondary" ion-button (click)="setMinus(1)">-1</button>
             </ion-col>
             <ion-col col-4>
-                <ion-input text-center type="number" [(ngModel)]="weight"></ion-input>
+                <ion-input text-center [ngModel]="weight | number: '1.0-0'" (ngModelChange)="weight=$event" type="number"></ion-input>
             </ion-col>
             <ion-col col-2>
                 <button color="secondary" ion-button (click)="setPlus(1)">+1</button>
@@ -41,11 +41,6 @@
             <ion-col col-2>
                 <button color="secondary" ion-button (click)="setPlus(5)">+5</button>
             </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-item>
-                <p>Weight in Kg {{ displayValue() | number: '1.0-0' }} </p>
-            </ion-item>
         </ion-row>
     </ion-grid>
 </ion-content>
