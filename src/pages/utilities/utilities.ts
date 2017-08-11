@@ -31,12 +31,8 @@ export class UtilitiesPage {
     return (this.unit == 'Lb' ? 'Kg' : 'Lb');
   }
 
-  private convertTo(unit: string) {
-    if (unit == 'Kg') {
-      this.weight = this.weight * this.toKgFactor;
-    } else if (unit == 'Lb') {
-      this.weight = this.weight * this.toLbFactor;
-    }
+  convertTo(unit: string) {
+    this.weight *= (unit == 'Kg' ? this.toKgFactor : this.toLbFactor);
   }
 
 
