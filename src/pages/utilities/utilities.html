@@ -43,6 +43,18 @@
             </ion-col>
         </ion-row>
         <hr>
+        <ion-list>
+            <ion-item *ngFor="let item of getPercValues(); let i = index">
+                <ion-row>
+                    <ion-col col-10>
+                        {{ item.percValue }}%
+                    </ion-col>
+                    <ion-col text-right col-2>
+                        {{ item.weightValue | number: '1.0-0' }}
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-list>
         <ion-row *ngFor="let item of getPercValues(); let i = index">
             <ion-col col-10>
                 {{ item.percValue }}%
