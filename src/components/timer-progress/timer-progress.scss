@@ -1,13 +1,13 @@
 .radial-progress {
     $circle-size: 180px;
     $circle-background: #d6dadc;
-    $circle-color: tomato;
-    $inset-size: 120px;
+    $circle-color: #b71c1c;
+    $inset-size: 160px;
     $inset-color: #fbfbfb;
     $transition-length: 1s;
     $shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
-    $percentage-color: tomato;
-    $percentage-font-size: 22px;
+    $percentage-color: #263238;
+    $percentage-font-size: 20px;
     margin: 50px;
     width: $circle-size;
     height: $circle-size;
