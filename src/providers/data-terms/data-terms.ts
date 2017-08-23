@@ -14,11 +14,9 @@ export class DataTermsProvider {
       .map((res) => res.json());
   }
 
-  filterItems(searchTerm) {
-    return this.terms.filter((item) => {
-      return item.term.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
-    });
-  }
-
-
+   filterItems(searchTerm) {
+     return this.terms.filter((item) => {
+       return item.term.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+     });
+   }
 }

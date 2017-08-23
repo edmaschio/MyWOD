@@ -25,15 +25,14 @@ export class DictionaryPage {
   }
 
   ionViewDidLoad() {
+     //this.setFilteredItems();
 
-    this.setFilteredItems();
+     this.searchControl.valueChanges.debounceTime(700).subscribe(search => {
 
-    this.searchControl.valueChanges.debounceTime(700).subscribe(search => {
+     this.searching = false;
+     this.setFilteredItems();
 
-        this.searching = false;
-        this.setFilteredItems();
-
-    });
+     });
   }
 
   onSearchInput(){
