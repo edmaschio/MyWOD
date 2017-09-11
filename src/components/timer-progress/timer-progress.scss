@@ -1,5 +1,5 @@
 .radial-progress {
-    $circle-size: 180px;
+    $circle-size: 170px;
     $circle-background: #d6dadc;
     $circle-color: #263238;
     $inset-size: 160px;
@@ -58,7 +58,7 @@
             text-align: center;
             font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
             color: $percentage-color;
-            font-weight: 800;
+            font-weight: 400;
             font-size: $percentage-font-size;
         }
     }
